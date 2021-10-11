@@ -8445,8 +8445,8 @@ if text == ("تحديث السورس") and Devspider(msg) then
 send(msg.chat_id_,msg.id_,'⋄︙تم التحديث')
 os.execute('rm -rf spider.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/spider/spidersr/master/spider.lua')
-os.execute('wget https://raw.githubusercontent.com/spider/spidersr/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/spider/Revosr/master/spider.lua')
+os.execute('wget https://raw.githubusercontent.com/spider/Revosr/master/start.lua')
 dofile('spider.lua')  
 return false
 end
@@ -8848,94 +8848,6 @@ tdcli_function ({ID = "GetUser",user_id_ = Sudo},function(arg,data)
 send(msg.chat_id_, msg.id_,"["..data.first_name_.."](T.me/"..data.username_..")")  
 end,nil)   
 end
-end
-if text == 'الملفات' and Devspider(msg) then
-t = '⋄︙جميع الملفات : \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n'
-i = 0
-for v in io.popen('ls spider_Files'):lines() do
-if v:match(".lua$") then
-i = i + 1
-t = t..i..'*~ '..v..'*\n'
-end
-end
-send(msg.chat_id_, msg.id_,t)
-end
-if text == "متجر الملفات" or text == 'المتجر' then
-if Devspider(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/spidersr/files_spider/main/getfile.json")
-if res == 200 then
-local Get_info, res = pcall(JSON.decode,Get_Files);
-vardump(res.plugins_)
-if Get_info then
-local TextS = "\n⋄︙اهلا بك في متجر ملفات سبايدر\n⋄︙يوجد في المتجر ملف الردود\n⋄︙يتم ادراج الملفات في التحديثات القادمه \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
-local TextE = "\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⋄︙تدل علامة (✔) الملف مفعل\n".."⋄︙تدل علامة (✖) الملف معطل\n"
-local NumFile = 0
-for name,Info in pairs(res.plugins_) do
-local Check_File_is_Found = io.open("spider_Files/"..name,"r")
-if Check_File_is_Found then
-io.close(Check_File_is_Found)
-CeckFile = "(✔)"
-else
-CeckFile = "(✖)"
-end
-NumFile = NumFile + 1
-TextS = TextS..'*'..NumFile..">* {`"..name..'`} > '..CeckFile..'\n[-  About to the file]('..Info..')\n'
-end
-send(msg.chat_id_, msg.id_,TextS..TextE) 
-end
-else
-send(msg.chat_id_, msg.id_,"⋄︙لا يوجد اتصال من ال api \n") 
-end
-return false
-end
-end
-
-if text and text:match("^(تعطيل ملف) (.*)(.lua)$") and Devspider(msg) then
-local name_t = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
-local file = name_t[2]..'.lua'
-local file_bot = io.open("spider_Files/"..file,"r")
-if file_bot then
-io.close(file_bot)
-t = "*⋄︙الملف > {"..file.."}\n⋄︙تم تعطيله وحذفه بنجاح \n✓*"
-else
-t = "*⋄︙بالتاكيد تم تعطيل وحذف ملف > {"..file.."} \n✓*"
-end
-local json_file, res = https.request("https://raw.githubusercontent.com/spidersr/files_spider/main/files_spider/"..file)
-if res == 200 then
-os.execute("rm -fr spider_Files/"..file)
-send(msg.chat_id_, msg.id_,t) 
-dofile('spider.lua')  
-else
-send(msg.chat_id_, msg.id_,"*⋄︙عذرا لا يوجد هاكذا ملف في المتجر *\n") 
-end
-return false
-end
-if text and text:match("^(تفعيل ملف) (.*)(.lua)$") and Devspider(msg) then
-local name_t = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
-local file = name_t[2]..'.lua'
-local file_bot = io.open("spider_Files/"..file,"r")
-if file_bot then
-io.close(file_bot)
-t = "*⋄︙بالتاكيد تم تنزيل وتفعيل ملف > {"..file.."} \n✓*"
-else
-t = "*⋄︙الملف > {"..file.."}\n⋄︙تم تنزيله وتفعيله بنجاح \n*"
-end
-local json_file, res = https.request("https://raw.githubusercontent.com/spidersr/files_spider/main/files_spider/"..file)
-if res == 200 then
-local chek = io.open("spider_Files/"..file,'w+')
-chek:write(json_file)
-chek:close()
-send(msg.chat_id_, msg.id_,t) 
-dofile('spider.lua')  
-else
-send(msg.chat_id_, msg.id_,"*⋄︙عذرا لا يوجد هاكذا ملف في المتجر *\n") 
-end
-return false
-end
-if text == "مسح جميع الملفات" and Devspider(msg) then
-os.execute("rm -fr spider_Files/*")
-send(msg.chat_id_,msg.id_,"⋄︙تم حذف جميع الملفات")
-return false
 end
 if text == 'نقل الاحصائيات' and Devspider(msg) then
 local Users = database:smembers(''..bot_id.."userss")
@@ -9901,8 +9813,8 @@ if text == "تحديث السورس ⋄" then
 send(msg.chat_id_,msg.id_,'⋄︙تم التحديث')
 os.execute('rm -rf spider.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/spider/spidersr/master/spider.lua')
-os.execute('wget https://raw.githubusercontent.com/spider/spidersr/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/spider/Revosr/master/spider.lua')
+os.execute('wget https://raw.githubusercontent.com/spider/Revosr/master/start.lua')
 dofile('spider.lua')  
 return false
 end
