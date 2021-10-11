@@ -1556,7 +1556,7 @@ if k == 1 then
 local GetStart = io.popen('downloadsh '..vv.url):read('*all') 
 if GetStart and GetStart:match('(.*)oksend(.*)') then 
 print('download Mp3 done ...\nName : '..vv.title..'\nIdLink : '..vv.url) 
-sendVoice(msg.chat_id_, msg.id_,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @vvcc7 ','@bessovbot') 
+sendVoice(msg.chat_id_, msg.id_,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @vvcc7 ','@Revovbot') 
 os.execute('rm -rf ./'..vv.url..'.mp3')  
 end 
 end 
@@ -1574,7 +1574,7 @@ if k == 1 then
 local GetStart = io.popen('downloadsh '..vv.url):read('*all') 
 if GetStart and GetStart:match('(.*)oksend(.*)') then 
 print('download Mp3 done ...\nName : '..vv.title..'\nIdLink : '..vv.url) 
-sendAudio(msg.chat_id_,msg.id_,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @vvcc7','@bessovbot') 
+sendAudio(msg.chat_id_,msg.id_,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @vvcc7','@Revovbot') 
 os.execute('rm -rf ./'..vv.url..'.mp3')  
 end 
 end 
@@ -3860,7 +3860,7 @@ redis:srem(bot_id.."Constructor"..msg.chat_id_, result.id_)
 redis:srem(bot_id.."Manager"..msg.chat_id_, result.id_)
 redis:srem(bot_id.."Mod:User"..msg.chat_id_, result.id_)
 redis:srem(bot_id.."Special:User"..msg.chat_id_, result.id_)
-Reply_Status(msg,result.id_,"reply","\n༄¦ تم تنزيل مميز \n༄¦ تم تنزيل ادمن \n༄¦ تم تنزيل مدير \n༄¦ تم تنزيل منشئ \n༄¦ تم تنزيل منشئ اساسي \n❏❏❏❏❏❏❏❏❏❏❏❏❏❏❏\n✯︙تم تنزيل العضو جميع الرتب\n✯︙ بواسطه ➥ [《BESSO》](t.me/BESSO500K)")  
+Reply_Status(msg,result.id_,"reply","\n༄¦ تم تنزيل مميز \n༄¦ تم تنزيل ادمن \n༄¦ تم تنزيل مدير \n༄¦ تم تنزيل منشئ \n༄¦ تم تنزيل منشئ اساسي \n❏❏❏❏❏❏❏❏❏❏❏❏❏❏❏\n✯︙تم تنزيل العضو جميع الرتب\n✯︙ بواسطه ➥ [《Revo》](t.me/Revo500K)")  
 else
 send(msg.chat_id_, msg.id_,"• لا يوجد حساب بهاذا المعرف")
 end
@@ -9184,10 +9184,10 @@ send(msg.chat_id_, msg.id_, "⋄︙تم التحديث")
 end
 
                 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then       
-Text = "[𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 ـ BeSsO Source ـ ](t.me/BESSO500K)"
+Text = "[𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 ـ Revo Source ـ ](t.me/Revo500K)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ـ BeSsO Source ـ  .',url="https://t.me/JFFFFF"}},
+{{text = 'ـ Revo Source ـ  .',url="https://t.me/JFFFFF"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9271,7 +9271,7 @@ send(msg.chat_id_, msg.id_,'• عذرا الاوامر هذا لا تخصك ')
 return false
 end
 local Text =[[
-ـ BeSsO Source ـ 
+ـ Revo Source ـ 
  —ـ—ـ—ـ—ـ—ـ—ـ—ـ—ـ— 
 ⌔︙لعرض اوامر الحمايه ⌯ 𝟏 ⌯ .
 ⌔︙لعرض الاوامر الخدميه ⌯ 𝟐 ⌯ .
@@ -10452,7 +10452,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-ـ BeSsO Source ـ 
+ـ Revo Source ـ 
  —ـ—ـ—ـ—ـ—ـ—ـ—ـ—ـ— 
 ⌔︙لعرض اوامر الحمايه ⌯ 𝟏 ⌯ .
 ⌔︙لعرض الاوامر الخدميه ⌯ 𝟐 ⌯ .
